@@ -1,45 +1,36 @@
+body {
+  background-image: url(../public/img/wallpaperpokemon.webp);
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.seachbox__pokemon--container {
+  display: block;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.seachbox__pokemon--form {
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchbox__pokemon--input {
+  width: 50%;
+  padding: 10px;
+}
+
+.searchbox__pokemon--button {
+  display: block;
+  margin: 10px;
+  color: blue;
 }
 
 .PokeAPI__card--image {
-  display: inline-block;
-  justify-content: center;
-  width: 300px;
-  padding: 5px, auto;
+  max-width: 250px;
+  max-height: 300px;
+  margin: 5px;
+  border-radius: 3%;
+  box-shadow: 5px 10px #e0e0e0;
 }

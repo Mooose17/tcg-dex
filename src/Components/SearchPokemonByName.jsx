@@ -17,19 +17,22 @@ const SearchPokemonByName = () => {
 
   return (
     <>
-      <div>
-        <form onSubmit={handleSubmit}>
+      <div className="seachbox__pokemon--container">
+        <form onSubmit={handleSubmit} className="seachbox__pokemon--form">
           <label>
             <input
               type="text"
               value={name}
               placeholder="Name A Pokemon!"
+              className="searchbox__pokemon--input"
               onChange={(event) => {
                 setName(event.target.value);
               }}
             />
           </label>
-          <button type="submit">Search!</button>
+          <button className="seachbox__pokemon--button" type="submit">
+            Search!
+          </button>
         </form>
       </div>
       <div>

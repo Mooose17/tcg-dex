@@ -1,9 +1,10 @@
 import React from "react";
+import logo from "../img/logo.png";
 
 const Header = () => {
   return (
     <div>
-      <h1>MOOSE TCG-DEX</h1>
+      <img src={logo} alt="moose tcg-dex" />
     </div>
   );
 };
