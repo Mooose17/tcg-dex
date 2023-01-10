@@ -20,17 +20,17 @@ body {
   width: 50%;
   padding: 10px;
 }
-
+/* 
 .searchbox__pokemon--button {
   display: block;
   margin: 10px;
   color: blue;
-}
+} */
 
 .PokeAPI__card--image {
   max-width: 250px;
   max-height: 300px;
   margin: 5px;
   border-radius: 3%;
-  box-shadow: 5px 10px #e0e0e0;
+  box-shadow: 5px 10px #950caa;
 }
