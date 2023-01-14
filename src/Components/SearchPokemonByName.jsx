@@ -5,16 +5,22 @@ import { GetCardsByName } from "../Utils/api";
 const SearchPokemonByName = () => {
   const [name, setName] = useState("");
   const [pokemon, setPokemon] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
     const res = await GetCardsByName(name);
     const pokemonCards = res.data.data;
     const pokemonCardArray = [];
     pokemonCards.map((currentPokemon) => pokemonCardArray.push(currentPokemon));
     setPokemon(pokemonCardArray);
+    setIsLoading(false);
   };
 
+  if (isLoading) {
+    return <p>Fetching Pokeballs</p>;
+  }
   return (
     <>
       <div className="seachbox__pokemon--container">
@@ -30,19 +36,26 @@ const SearchPokemonByName = () => {
               }}
             />
           </label>
-          <button className="seachbox__pokemon--button" type="submit">
+          <button className="searchbox__pokemon--button" type="submit">
             Search!
           </button>
         </form>
       </div>
       <div>
         {pokemon.map((pokemoncard) => (
-          <img
+          <a
+            href={pokemoncard.cardmarket?.url}
+            target="_blank"
+            rel="noreferrer"
             key={pokemoncard.id}
-            src={pokemoncard.images.small}
-            alt="pokemon cards"
-            className="PokeAPI__card--image"
-          />
+          >
+            <img
+              key={pokemoncard.id}
+              src={pokemoncard.images.small}
+              alt="pokemon cards"
+              className="PokeAPI__card--image"
+            />
+          </a>
         ))}
       </div>
     </>

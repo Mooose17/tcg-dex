@@ -34,3 +34,11 @@ body {
   border-radius: 3%;
   box-shadow: 5px 10px #950caa;
 }
+
+.searchbox__pokemon--button {
+  background-color: #950caa;
+  color: white;
+  font-size: medium;
+  padding: 10px;
+  margin-left: 10px;
+}
