@@ -19,7 +19,11 @@ const SearchPokemonByName = () => {
   };
 
   if (isLoading) {
-    return <p>Fetching Pokeballs</p>;
+    return (
+      <div className="Loading__message">
+        <p>Fetching Pokeballs</p>
+      </div>
+    );
   }
   return (
     <>

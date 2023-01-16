@@ -42,3 +42,7 @@ body {
   padding: 10px;
   margin-left: 10px;
 }
+
+.Loading__message {
+  color: white;
+}
